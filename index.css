@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.main-bg-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.profile-form {
+    background-color: #ffffff;
+    border-radius: 25px;
+    width: 90%;
+    padding: 10px;
+}
+
+.form-container {
+    padding: 10px;
+}
+
+.success-msg-display {
+    display: none;
+}
+
+.success {
+    color: green;
+    font-family: "Roboto";
+    font-weight: 400;
+}
+
+.user-details-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-family: "Bree Serif";
+    width: 300px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.user-details-card-heading {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.user-details-card-paragraph {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.section-dashboard-top-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-dashboard-top-section-heading {
+    font-size: 18px;
+    width: 150px;
+}
+
+.bg-image {
+    background-image: linear-gradient(to right, #5f9488, #4c869c);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+.dashboards {
+    width: 80%;
+}
+
+.custom-btn {
+    display: none;
+}
+
+.error {
+    color: red;
+}
+
+.main-bg-heading {
+    font-size: 24px;
+}
+
+.delete-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.login-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.signup-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.bg-container {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-login {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section-sign-up {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section-admin-dashboard,
+.section-user-dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.section-dashboard-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-user-dashboard-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-set-password {
+    width: 100%;
+}
+
+.section-forgot {
+
+    width: 100%;
+}
+
+.Dashboard-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.section-dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ct-chart .ct-bar {
+    stroke: red;
+    width: 30px;
+}
+
+.users-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.dashboards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+@media (min-width:768px) {
+    .main-bg-container {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 70%;
+    }
+
+    .signup-bg-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .users-cards {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .profile-form {
+        background-color: #ffffff;
+        border-radius: 25px;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .dashboard-card {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .dashboards {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .section-dashboard-top-section-heading {
+        font-size: 30px;
+    }
+
+    .main-bg-heading {
+        font-size: 30px;
+    }
+
+    .bg-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .section-successful {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 400px;
+        margin-right: 20px;
+        border-radius: 20px;
+    }
+
+    .section-admin-dashboard-card {
+        width: 80%;
+        padding: 10px;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-admin-dashboard {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;
+    }
+
+    .section-user-dashboard {
+        width: 100%;
+        min-height: 100vh;
+        padding: 10px;
+        padding-top: 200px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .section-user-dashboard-card {
+        width: 80%;
+        min-height: 100vh;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-dashboard-top-section-heading {
+        width: 100vw;
+        font-size: 20px;
+    }
+
+    .signup-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+
+    .section-sign-up {
+        width: 50%;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .section-login {
+        width: 50%;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .section-set-password {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-admin-dashboard,
+    .section-user-dashboard {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .chart-container {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .section-dashboard-top-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .section-forgot {
+        width: 50%;
+    }
+}

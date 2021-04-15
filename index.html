@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Datascience</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src='https://cdn.jsdelivr.net/npm/chartist@0.11.4/dist/chartist.min.js'></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+
+<body>
+    <div id="sectionMain">
+        <div class="main-bg-container bg-image">
+            <div>
+                <img src="https://res.cloudinary.com/dytr8gjhd/image/upload/v1618253165/logo_200x200_crq7ph.png" />
+                <h1 class="mb-4">Welcome</h1>
+            </div>
+            <div class="cards-container">
+                <div class="login-card shadow p-5">
+                    <h1 class="main-bg-heading">Have an account?</h1>
+                    <button class="btn btn-outline-primary" id="sectionMainLogin">Login</button>
+                </div>
+                <div class="signup-card shadow p-5">
+                    <h1 class="main-bg-heading">Create an account?</h1>
+                    <button class="btn btn-outline-info" id="sectionMainSignUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionLogin">
+        <div class="bg-container p-2 bg-image">
+            <div class="section-login">
+                <div class="text-center">
+                    <img src="https://res.cloudinary.com/dytr8gjhd/image/upload/v1618253165/logo_200x200_crq7ph.png" />
+                </div>
+                <label for="emailInput">Email</label>
+                <input type="text" id="emailInput" class="form-control mb-2" placeholder="Email" />
+                <p id="emailInputErrorMessage" class="error"></p>
+                <label for="passwordInput">password</label>
+                <input type="password" id="passwordInput" class="form-control mb-2" placeholder="Password" />
+                <p id="passwordInputErrorMessage" class="error"></p>
+                <p id="errorMsg" class="error"></p>
+                <a href="#sectionSetPassword" id="forgotLink" class="mb-2">forgot password</a>
+                <div class="buttons-container mt-2">
+                    <button id="loginBack" class="btn btn-outline-danger mr-3">Back</button>
+                    <button id="loginButton" class="btn btn-outline-primary">login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionForgot">
+        <div class="bg-container bg-image">
+            <div class="section-forgot">
+                <label for="forgotEmailInput">Email</label>
+                <input type="text" id="forgotEmailInput" class="form-control mb-2" placeholder="Email" />
+                <p id="forgotEmailErrorMsg" class="error"></p>
+                <div class="buttons-container mt-2">
+                    <button id="sectionForgotBack" class="btn btn-danger mr-3">Back</button>
+                    <button id="forgotEmailBtn" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionForgotPassword">
+        <div class="bg-container bg-image">
+            <div class="section-forgot">
+                <label for="forgotPasswordInput">New Password</label>
+                <input type="password" id="forgotPasswordInput" class="form-control mb-2" placeholder="password" />
+                <p id="forgotPasswordErrorMsg" class="error"></p>
+                <label for="forgotConfirmPasswordInput">Confirm Password</label>
+                <input type="password" id="forgotConfirmPasswordInput" class="form-control mb-2" placeholder="password" />
+                <p id="forgotConfirmPasswordErrorMsg" class="error"></p>
+                <div class="buttons-container mt-2">
+                    <button id="sectionForgotPasswordBack" class="btn btn-danger mr-3">Back</button>
+                    <button id="forgotPasswordBtn" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionSignUp">
+        <div class="signup-bg-container p-2 bg-image">
+            <div class="section-sign-up">
+                <div class="text-center">
+                    <img src="https://res.cloudinary.com/dytr8gjhd/image/upload/v1618253165/logo_200x200_crq7ph.png" />
+                </div>
+                <label for="firstNameInput">First Name</label>
+                <input type="text" id="firstNameInput" class="form-control mb-2" placeholder="First Name" />
+                <p id="signUpFirstNameInputErrorMessage" class="error"></p>
+                <label for="lastNameInput">Last Name</label>
+                <input type="text" id="lastNameInput" class="form-control mb-2" placeholder="Last Name" />
+                <p id="signUpLastNameInputErrorMessage" class="error"></p>
+                <label for="signUpEmailInput">Email</label>
+                <input type="text" id="signUpEmailInput" class="form-control mb-2" placeholder="Email" />
+                <p id="signUpEmailInputErrorMessage" class="error"></p>
+                <label for="numberInput">Number</label>
+                <input id="numberInput" class="form-control mb-2" placeholder="Mobile Number" />
+                <p id="numberInputErrorMsg" class="error"></p>
+                <p id="userExistedErrMsg" class="error"></p>
+                <div class="buttons-container">
+                    <button id="signUp" class="btn btn-outline-danger mr-3">Back</button>
+                    <button class="btn btn-primary mr-3 custom-btn" id="signUpNavLoginButton">Login</button>
+                    <button id="signUpButton" class="btn btn-outline-info">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionSetPassword">
+        <div class="section-set-password bg-image">
+            <div>
+                <h1>Set Password</h1>
+                <label for="setPasswordInput">Password</label>
+                <input type="password" id="setPasswordInput" class="form-control" placeholder="Password" />
+                <p id="setPasswordInputErrorMsg" class="error"></p>
+                <div class="buttons-container mt-2">
+                    <button id="sectionSetPasswordBack" class="btn btn-danger mr-3">Back</button>
+                    <button id="setPasswordBtn" class="btn btn-primary">Set password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionSuccessful">
+        <div class="section-successful bg-image">
+            <div>
+                <h1>Registered Sucessfully</h1>
+                <button class="btn btn-success" id="sectionRedirectLogin">Go to login page</button>
+            </div>
+        </div>
+    </div>
+    <div id="sectionDashboard">
+        <div class="section-dashboard bg-image">
+            <div class="dashboards">
+                <div class="dashboard-card shadow mr-2 mb-2">
+                    <p>Admin Dashboard</p>
+                    <button class="btn btn-primary" id="goToAdminDashboardBtn">Click</button>
+                </div>
+                <div class="dashboard-card shadow mb-2">
+                    <p>User Dashboard</p>
+                    <button class="btn btn-primary" id="goToUserDashboardBtn">Click</button>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-danger ml-1" id="sectionLogout">Logout</button>
+            </div>
+        </div>
+    </div>
+    <div id="sectionAdminDashboard">
+        <div class="section-admin-dashboard bg-image">
+            <div class="section-admin-dashboard-card">
+                <div class="section-dashboard-top-section">
+                    <h1 id="dashboardWelcomeMsg" class="section-dashboard-top-section-heading"></h1>
+                    <button id="goToDbFromAdminBtn" class="btn btn-danger">Back</button>
+                </div>
+                <div id="usersCards" class="users-cards"></div>
+                <div class="chart-container">
+                    <p>Number of times password has changed by each user</p>
+                    <div class="ct-chart ct-perfect-fourth w-100"></div>
+                    <p>Zoom To View The Chart</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionUserDashboard">
+        <div class="section-user-dashboard bg-image">
+            <div class="section-user-dashboard-card">
+                <div class="section-dashboard-top-section">
+                    <h1 id="userDashboardWelcomeMsg" class="section-dashboard-top-section-heading"></h1>
+                    <button id="goToDbFromUserBtn" class="btn btn-danger">Back</button>
+                </div>
+                <div class="form-container">
+                    <div class="profile-form shadow">
+                        <label for="profileFirstNameInput">First Name</label>
+                        <input type="text" id="profileFirstNameInput" class="form-control mb-2" placeholder="First Name" />
+                        <p id="profileFirstNameInputErrMsg" class="error"></p>
+                        <label for="profileLastNameInput">Last Name</label>
+                        <input type="text" id="profileLastNameInput" class="form-control mb-2" placeholder="Last Name" />
+                        <p id="profileLastNameInputErrMsg" class="error"></p>
+                        <label for="profileEmailInput">Email</label>
+                        <p type="text" id="profileEmailInput" class="form-control mb-2"></p>
+                        <p id="profileFirstNameInputErrMsg" class="error"></p>
+                        <label for="profileNumberInput">Number</label>
+                        <input id="profileNumberInput" class="form-control mb-2" placeholder="Mobile Number" />
+                        <p id="profileNumberInputErrMsg" class="error"></p>
+                        <label for="profileClassTenPercentageInput">Class 10 Percentage</label>
+                        <input id="profileClassTenPercentageInput" class="form-control mb-2" placeholder="Enter Percentage Round Off" />
+                        <p id="profileClassTenPercentageInputErrMsg" class="error"></p>
+                        <label for="profileClassTwelvePercentageInput">Class 12 Percentage</label>
+                        <input id="profileClassTwelvePercentageInput" class="form-control mb-2" placeholder="Enter Percentage Round Off" />
+                        <p id="profileClassTwelvePercentageInputErrMsg" class="error"></p>
+                        <label for="profileQualificationInput">Qualification</label>
+                        <input id="profileQualificationInput" class="form-control mb-2" placeholder="Qualification" />
+                        <p id="profileQualificationInputErrMsg" class="error"></p>
+                        <label for="profileQualificationPercentageInput">Qualification Percentage</label>
+                        <input id="profileQualificationPercentageInput" class="form-control mb-2" placeholder="Enter Percentage Round Off" />
+                        <p id="profileQualificationPercentageInputErrMsg" class="error"></p>
+                        <label for="profileWorkingCompanyInput">Working Company</label>
+                        <input id="profileWorkingCompanyInput" class="form-control mb-2" placeholder="Company Name" />
+                        <p id="saveProfile" class="success success-msg-display">Details Updated Sucessfully</p>
+                        <p id="invalidProfileDetails" class="error d-none">Invalid Details</p>
+                        <div class="buttons-container">
+                            <button id="saveProfileBtn" class="btn btn-outline-info">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
