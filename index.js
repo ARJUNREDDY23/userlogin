@@ -171,7 +171,18 @@ function getUserListFromLocalStorage() {
     }
 }
 let userArray = getUserListFromLocalStorage();
-let count = userArray.length;
+
+function getCountFromLocalStorage() {
+    let stringifiedCount = localStorage.getItem("count");
+    let parsedCount = JSON.parse(stringifiedCount);
+    if (parsedCount === null) {
+        return 0;
+    } else {
+        return parsedCount;
+    }
+}
+
+let count = getCountFromLocalStorage();
 
 function getTableDataFromLocalStorage() {
     let stringifiedTableData = localStorage.getItem("tableData");
@@ -215,6 +226,8 @@ function clearSignupFields() {
     numberInputErrorMsg.textContent = "";
     signUpEmailInput.value = "";
     signUpEmailInputErrorMessage.textContent = "";
+    userExistedErrMsg.textContent = "";
+    signUpNavLoginButton.classList.add("custom-btn");
 }
 
 function deleteUser(userId) {
@@ -294,6 +307,7 @@ function clearLoginFields() {
     emailInputErrorMessage.text = "";
     passwordInput.value = "";
     passwordInputErrorMessage.textContent = "";
+    errorMsg.textContent = "";
 }
 
 sectionMainLogin.addEventListener("click", function() {
@@ -370,6 +384,8 @@ setPasswordBtn.addEventListener("click", function() {
             localStorage.setItem("userArray", stringifiedArray);
             data.labels.push([newUser.email]);
             count += 1;
+            let stringifiedCount = JSON.stringify(count);
+            localStorage.setItem("count", stringifiedCount);
             data.series[0].push(0);
             let stringifiedTableData = JSON.stringify(data);
             localStorage.setItem("tableData", stringifiedTableData);
@@ -442,7 +458,7 @@ signUpEmailInput.addEventListener("blur", signUpEmailInputValidate);
 numberInput.addEventListener("blur", numberInputValidate);
 
 function validateSignUp() {
-    if (count < 5) {
+    if (userArray.length < 5) {
         let numberInputValue = parseInt(numberInput.value);
         if ((firstNameInput.value !== "") && (lastNameInput.value !== "") && (signUpEmailInput.value !== "") && (numberInput.value !== "") && (typeof(numberInputValue) === typeof(1)) && ((numberInput.value).length === 10)) {
             let user = userArray.find((eachItem) => {
@@ -780,6 +796,7 @@ forgotLink.addEventListener("click", function() {
     displayDetails.sectionLogin = "none";
     let stringifiedDisplayDetails = JSON.stringify(displayDetails);
     localStorage.setItem("displayDetails", stringifiedDisplayDetails);
+    clearLoginFields();
 })
 for (let each of userArray) {
     addUsersToDashboard(each);
